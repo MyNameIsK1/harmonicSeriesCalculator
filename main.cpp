@@ -48,6 +48,7 @@ int main() {
         }
     } while (correctInput == false);
 
+    counter = 0;
     partialTerm = 0;
     while (partialTerm <= numberOfTerms) {
         partialTerm++;
