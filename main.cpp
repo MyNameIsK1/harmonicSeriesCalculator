@@ -48,6 +48,7 @@ int main() {
         }
     } while (correctInput == false);
 
+    partialTerm = 0;
     while (partialTerm <= numberOfTerms) {
         partialTerm++;
         counter++;
@@ -56,7 +57,7 @@ int main() {
             actualTerm = actualTerm*partialTerm;
         }
         harmonicSeries = harmonicSeries + 1.0/actualTerm;
-        if (counter == interval) {
+        if (counter == interval || partialTerm == numberOfTerms) {
             cout<<endl<<"The sum of 1/n^"<<nPower<<" for "<<partialTerm<<" terms is: ";
             cout<<harmonicSeries<<endl;
             counter = 0;
